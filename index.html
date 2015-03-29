@@ -1,28 +1,118 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adarsh Tadimari</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="style.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+
+
+<!-- Tracking code -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3698471-13']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body onload="start()">
+
+<div id="header" class="bg1">
+  <div id="headerblob">
+    <img src="me.jpg" class="img-circle imgme">
+    <div id="headertext">
+      <div id="htname">Adarsh Tadimari</div>
+      <div id="htdesc">IIT Madras Electrical Engineering Undergraduate student</div>
+      <div id="htem">adarsht _at_ smail.iitm.ac.in</div>
+      <div id="icons">
+        <div class="svgico">
+          <a href="https://twitter.com/adarshtadimari"><img src="icons/03-twitter.svg"></a>
+        </div>
+        <div class="svgico">
+          <a href="https://plus.google.com/+AdarshTadimari/posts"><img src="icons/80-google-plus.svg"></a>
+        </div>
+        <div class="svgico">
+          <a href="https://github.com/tadarsh"><img src="icons/octocat.svg" width="56px"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div id="timeline">
+    <div class="timelineitem">
+      <div class="tdate">Winter 2014</div>
+      <div class="ttitle">Internship at HyperVerge Inc.</div>
+      <div class="tdesc"> Large Scale Image Classification using <span class="thigh">Deep Learning</span> and Computer Vision.</div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">Summer 2014</div>
+      <div class="ttitle">Internship at HyperVerge Inc.</div>
+      <div class="tdesc">Scene Recognition using <span class="thigh">Deep Learning</span>.</div>
+    </div>
+    <div class="timelineitem">
+     <div class="tdate">Winter 2013</div>
+      <div class="ttitle">Internship at Lema Labs</div>
+      <div class="tdesc">I developed an interactive  
+          environment for tutorials in robotics.</div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">2012-
+      </div>
+      <div class="ttitle">Indian Institute of Technology Madras: Bachelor's Degree</div>
+      <div class="tdesc">Major in <span class="thigh">Electrical Engineering</span>.</div>
+    </div>
+  </div>
+</div>
+<!-- place js at end for faster loading -->
+<script src="jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+
+var more_projects_shown = false;
+function start() {
+  $("#showmoreprojects").click(function() {
+    if(!more_projects_shown) {
+      $("#moreprojects").slideDown('fast', function() {
+        $("#showmoreprojects").text('hide');
+      });
+      more_projects_shown = true;
+    } else {
+      $("#moreprojects").slideUp('fast', function() {
+        $("#showmoreprojects").text('show more');
+      });
+      more_projects_shown = false;
+    }
+  });
+
+  var more_pubs_shown = false;
+  $("#showmorepubs").click(function() {
+    if(!more_pubs_shown) {
+      $("#morepubs").slideDown('fast', function() {
+        $("#showmorepubs").text('hide');
+      });
+      more_pubs_shown = true;
+    } else {
+      $("#morepubs").slideUp('fast', function() {
+        $("#showmorepubs").text('show more');
+      });
+      more_pubs_shown = false;
+    }
+  });
+
+}
+
+</script>
+
+</body>
 </html>
